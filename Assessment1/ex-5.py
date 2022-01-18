@@ -1,5 +1,5 @@
-str = input("Enter the numbers:")
-dim=[int(x) for x in str.split(',')]
+user_val = input("Enter the numbers:")
+dim=[int(x) for x in user_val.split(',')]
 rowNum=dim[0]
 colNum=dim[1]
 multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
