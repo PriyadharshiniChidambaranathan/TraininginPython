@@ -1,4 +1,5 @@
 
-s = input("Enter the sequence of words:")
-words = [word for word in s.split(",")]
-print(",".join(sorted(list(set(words)))))
+user_list = input("Input words: ")
+lst = user_list.split(",")
+lst.sort()
+print((', ').join(lst))
