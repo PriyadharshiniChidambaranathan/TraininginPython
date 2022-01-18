@@ -1,10 +1,18 @@
-dict = {'key1':'Python', 'key2':'C++'}
-print("Current Dict is: ", dict)
-
-dict['key3'] = 'Java'
-dict['key4'] = 'is'
-dict['key5'] = 'a'
-dict['key6'] = 'Programming language'
-# to update
-dict['key3'] = 'Perl'
-print("Updated Dict is: ", dict)
+dict = {}
+while True:
+  user=input("Do you want Add/Modify Dictionary or Exit:")
+  if user=='Add':
+    key=input("Enter the key to add:")
+    value=input("Enter the value to add:")
+    dict[key]=value
+    print(dict)
+    continue
+  elif user=='Modify':
+    key=input("Enter the key to modify:")
+    value=input("Enter the value to modify:")
+    dict.update({key.value})
+    print(dict)
+    continue
+  else: user_input=='Exit'
+  break
+    
