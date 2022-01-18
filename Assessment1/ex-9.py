@@ -1,17 +1,8 @@
 
-def checkKey(dict, key):
-
-	if key in dict:
-		print("Present, ", end =" ")
-		print("value =", dict[key])
-	else:
-		print("Not present")
-
-# Driver Code
-dict = {'a': 100, 'b':200, 'c':300}
-
-key = 'b'
-checkKey(dict, key)
-
-key = 'w'
-checkKey(dict, key)
+d={'A':1,'B':2,'C':3}
+key=input("key = ")
+if key in d.keys():
+      print("Present,value =",end=" ")
+      print(d[key])
+else:
+      print("Not present")
