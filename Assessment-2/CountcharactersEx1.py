@@ -1,4 +1,4 @@
-#Using Regex
+#Using Regex Method
 import  re
 
 string=input(" ")
