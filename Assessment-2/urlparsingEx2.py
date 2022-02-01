@@ -15,7 +15,7 @@ protocolres = str(protocol)[1:-1]
 print("Protocol:",protocolres)
 
 #finding the portnumber
-portnum = re.findall('.com:(\d+)?', url)
+portnum = re.findall(':(\d+)?', url)
 portnumres = str(portnum)[1:-1]
 print("Port number:",portnumres)
 
