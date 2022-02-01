@@ -3,12 +3,10 @@ import  re
 
 string=input(" ")
   
-# Creating separate lists using 
-# the re.findall() method.
 uppercase = re.findall(r"[A-Z]", string)
 lowercase = re.findall(r"[a-z]", string)
 numbers = re.findall(r"[0-9]", string)
-special = re.findall(r"[, .!?]", string)
+special = re.findall(r"['@_!#$%^&*()<>?/\|}{~:.-]", string)
 space = re.findall(r"[ ]", string)
   
 print("No. of uppercase characters =", len(uppercase))
