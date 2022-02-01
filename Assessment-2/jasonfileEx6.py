@@ -11,8 +11,6 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-
-
 class create_dict(dict): 
   
     # __init__ function 
