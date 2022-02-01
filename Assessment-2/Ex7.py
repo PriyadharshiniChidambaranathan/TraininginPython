@@ -1,24 +1,17 @@
 
-import requests
-from bs4 import BeautifulSoup as bs
-from openpyxl import Workbook
+import csv
+from bs4 import BeautifulSoup 
+import urllib.request
+
+f= open('dataoutput.csv', 'w', newline = "")
+writer = csv.writer(f)
+soup = BeautifulSoup(urllib.request.urlopen("https://en.wikipedia.org/wiki/Global_music_industry_market_share_data").read(),'lxml')
+
+tbody=soup('table',{"class":"wikitable plainrowheaders sorttable"})[0].find_all('tr')
 
 
-URL = 'https://www.geeksforgeeks.org/page/'
-req = requests.get(URL)
-soup = bs(req.text, 'html.parser')
-
-titles = soup.find_all('div', attrs={'class', 'head'})
-titles_list = []
-
-count = 1
-for title in titles:
-    d = {}
-    d['Title Number'] = f'Title {count}'
-    d['Title Name'] = title.text
-    count +=1
-    titles_list.append(d)
-
-import pandas as pd
-df = pd.DataFrame(data = titles_list[1:],columns =titles_list[0])
-df.to_excel('user-page-html.xlsx')
+for row in tbody:
+    cols=row.findChildren(recursive=False)
+    cols=[ele.text.strip() for ele in cols]
+    writer.writerow(cols)
+    print(cols)
