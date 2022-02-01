@@ -22,10 +22,10 @@ class create_dict(dict):
         self[key] = value
 
 mydict = create_dict()
-select_employee = """SELECT * FROM movies"""
+select_movie = """SELECT * FROM movies"""
 cursor=mydb.cursor()
 
-cursor.execute(select_employee)
+cursor.execute(select_movie)
 result = cursor.fetchall()
 
 for row in result:
