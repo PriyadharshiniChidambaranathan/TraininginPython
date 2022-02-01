@@ -3,8 +3,9 @@ import re
 
 url=input(" ")
 print("URL:",url)
+
 # finding the hostname which may
-hostname = re.findall('://www.([\w\-\.]+)',url)
+hostname = re.findall('://\w+.([\w\-\.]+)',url)
 hostnameres = str(hostname)[1:-1]
 print("Hostname:",hostnameres)
 
