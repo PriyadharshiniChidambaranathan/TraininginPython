@@ -1,4 +1,26 @@
-# Basic Method
+#Using Regex
+import  re
+
+string=input(" ")
+  
+# Creating separate lists using 
+# the re.findall() method.
+uppercase = re.findall(r"[A-Z]", string)
+lowercase = re.findall(r"[a-z]", string)
+numbers = re.findall(r"[0-9]", string)
+special = re.findall(r"[, .!?]", string)
+space = re.findall(r"[ ]", string)
+  
+print("No. of uppercase characters =", len(uppercase))
+print("No. of lowercase characters =", len(lowercase))
+print("No. of numerical characters =", len(numbers))
+print("No. of special characters =", len(special))
+print("No. of white space characters =", len(space))
+
+
+
+
+# Using basic Method
 str=input(" ")#take input from the user
 upper, lower, num, special, space=0,0,0,0,0;#variable declaration and initilization
 for i in range(len(str)):
