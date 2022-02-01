@@ -1,17 +1,20 @@
 
 import re  
 
-
 url=input(" ")
-  
+print("URL:",url)
+# finding the hostname which may
+hostname = re.findall('://www.([\w\-\.]+)',url)
+hostnameres = str(hostname)[1:-1]
+print("Hostname:",hostnameres)
+
 # finding the protocol 
 protocol = re.findall('(\w+)://',url)
-print("Protocol:",protocol)
-  
-# finding the hostname which may
-hostname = re.findall('://www.([\w\-\.]+)', url)
-print("Hostname:",hostname)
+protocolres = str(protocol)[1:-1]
+print("Protocol:",protocolres)
 
-#finding portnum
-portnum = re.findall('(:(\d+))?',url)
-print("Port Number:",portnum)
+#finding the portnumber
+portnum = re.findall('.com:(\d+)?', url)
+portnumres = str(portnum)[1:-1]
+print("Port number:",portnumres)
+
