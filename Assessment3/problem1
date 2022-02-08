@@ -22,5 +22,20 @@ for i in range (1,t+1):
     column_repeated=0
     for i in range(N):
       sum_of_diagonals+=input_matrix[i][i]
-    print("output: ")
-    print(sum_of_diagonals)
+    
+    # to find repeated elements in column
+    for i in range(N):
+       col_dup = set()
+       for j in range(N):
+           col_dup.add(input_matrix[j][i])
+       if len(col_dup) != N:
+           column_repeated += 1
+           
+    
+    #to find repeated elements in row
+    for i in range(N):
+      row_duplicate = set(input_matrix[i])      
+      if len(row_duplicate) != N:
+        row_repeated += 1
+        
+    print("Case #{}: {} {} {}".format(i, sum_of_diagonals, row_repeated, column_repeated))
