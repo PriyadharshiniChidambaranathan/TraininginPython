@@ -18,7 +18,7 @@ print("Column List:\n",df.columns,"\n")
 
 
 #dataframe with non zero values of  win_by_wickets column
-
+#df[win_by_wickets].loc[df[win_by_wickets]!=0]
 
 
 #SD of win by wickets data
