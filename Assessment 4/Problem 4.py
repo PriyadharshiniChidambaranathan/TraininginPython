@@ -27,11 +27,13 @@ print("\nSD of win_by_wickets :", sd_res,"\n")
 
 
 #dataframe by grouping city and winner
-#ci_wi = 
-df.groupby(["city", "winner"])
+ci_wi =df.groupby(["city", "winner"])
+for key,item in ci_wi:
+  grp_city=ci_wi.get_group(key)
+  print(grp_city,"\n")
 #print("Groupby City and winner\n",ci_wi)
 
-#Conditional property
+
 
 
 
