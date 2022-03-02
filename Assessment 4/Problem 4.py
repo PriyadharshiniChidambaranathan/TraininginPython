@@ -17,10 +17,6 @@ print("\nMean of win_by_wickets :", mn_res,"\n")
 print("Column List:\n",df.columns,"\n")
 
 
-#dataframe with non zero values of  win_by_wickets column
-#df[win_by_wickets].loc[df[win_by_wickets]!=0]
-
-
 #SD of win by wickets data
 sd_res=df['win_by_wickets'].std()
 print("\nSD of win_by_wickets :", sd_res,"\n")
@@ -33,7 +29,11 @@ for key,item in ci_wi:
   print(grp_city,"\n")
 #print("Groupby City and winner\n",ci_wi)
 
-
+#Conditional probability 
+total_matches=(df['city'].value_counts()['Mumbai'])
+Mumbai=(df['winner'].value_counts()['Mumbai Indians'])
+probility=Mumbai/total_matches
+print(probility)
 
 
 
