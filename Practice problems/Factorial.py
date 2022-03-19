@@ -15,7 +15,8 @@ ans=factorial(num)
 print("Factorial of {} is {}".format(num,ans))
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
-#recursion
+#recursion  ALWAYS USE THIS METHOD IN PYTHON
+
 def factorial(num):
   if num==0 or num==1:
     return num
