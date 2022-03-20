@@ -8,6 +8,8 @@ while(num>0):
 print(res)
 if(res==val):
   print("{} is an armstrong number".format(val))
+else:
+  print("not")
   
   
   
